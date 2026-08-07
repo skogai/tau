@@ -23,3 +23,6 @@ website/.hugo_build.lock
 
 # Agent tools
 .firecrawl/
+
+# Claude Code hook logs
+.claude/hooks/*.log
