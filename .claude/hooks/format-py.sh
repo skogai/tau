@@ -4,6 +4,12 @@
 # instead of vanishing, so a broken setup is still discoverable.
 dir=$(dirname "$0")
 log="$dir/format-py.log"
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "$(date -Iseconds) jq not found on PATH" >> "$log"
+  exit 0
+fi
+
 f=$(jq -r '.tool_input.file_path // empty')
 case "$f" in
   *.py)
