@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
-- Setup: `uv sync --dev`
+- Setup: `uv sync --dev --locked` (matches CI; drop `--locked` only if you intend to update the lockfile)
 - Run tests: `uv run pytest`
 - Lint: `uv run ruff check .`
 - Format check: `uv run ruff format --check .`
